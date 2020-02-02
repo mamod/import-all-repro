@@ -1,0 +1,28 @@
+{
+  "name": "repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:parcel && npm run build:babel",
+    "build:babel": "BABEL_ENV=esm babel src --out-dir dist/babel --extensions .js,.tsx,.ts,.tsx --source-maps inline",
+    "build:parcel": "PARCEL_AUTOINSTALL=false parcel build src/index.js --target node -d ./dist/parcel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-macros": "^2.8.0",
+    "import-all.macro": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.5"
+  }
+}
