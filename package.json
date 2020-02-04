@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:parcel && npm run build:babel",
-    "build:babel": "BABEL_ENV=esm babel src --out-dir dist/babel --extensions .js,.tsx,.ts,.tsx --source-maps inline",
-    "build:parcel": "PARCEL_AUTOINSTALL=false parcel build src/index.js --target node -d ./dist/parcel",
+    "build:babel": "BABEL_ENV=esm babel src --out-dir dist/babel --extensions .ts,.tsx --source-maps inline",
+    "build:parcel": "PARCEL_AUTOINSTALL=false parcel build src/index.ts --target node -d ./dist/parcel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
